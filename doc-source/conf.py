@@ -32,6 +32,7 @@ todo_include_todos = bool(os.environ.get("SHOW_TODOS", 0))
 intersphinx_mapping = {
 		"python": ("https://docs.python.org/3/", None),
 		"sphinx": ("https://www.sphinx-doc.org/en/stable/", None),
+		"pygments": ("https://pygments.org/", None),
 		}
 
 html_theme_options = {
@@ -78,4 +79,4 @@ def setup(app):
 
 
 nitpicky = True
-autosummary_widths_builders = ["latex"]
+needspace_amount = r"5\baselineskip"

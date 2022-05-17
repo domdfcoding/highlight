@@ -28,12 +28,10 @@ python_versions:
 
 sphinx_conf_epilogue:
  - nitpicky = True
- - autosummary_widths_builders = ["latex"]
+ - needspace_amount = r"5\baselineskip"
 
 extra_sphinx_extensions:
- - sphinx_toolbox_experimental.html_section
- - sphinx_toolbox_experimental.autosummary_widths
- - sphinx_toolbox_experimental.needspace
+ - sphinx_toolbox.more_autosummary.column_widths
  - sphinx_click
 
 keywords:
@@ -48,3 +46,6 @@ yapf_exclude:
  - tests/examplefiles
 
 pre_commit_exclude: "^tests/(examplefiles|test_options_)/.*"
+
+intersphinx_mapping:
+ - "'pygments': ('https://pygments.org/', None)"

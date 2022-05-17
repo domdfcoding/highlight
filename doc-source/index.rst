@@ -142,6 +142,7 @@ Contents
 	usage
 	contributing
 	Source
+	license
 
 .. sidebar-links::
 	:caption: Links
