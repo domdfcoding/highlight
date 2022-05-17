@@ -15,7 +15,6 @@ python_deploy_version: 3.7
 #min_coverage: 100
 docs_fail_on_warning: true
 sphinx_html_theme: furo
-mypy_version: "0.910"
 standalone_contrib_guide: True
 
 # Versions to run tests for
@@ -49,3 +48,6 @@ pre_commit_exclude: "^tests/(examplefiles|test_options_)/.*"
 
 intersphinx_mapping:
  - "'pygments': ('https://pygments.org/', None)"
+
+tox_unmanaged:
+  - flake8

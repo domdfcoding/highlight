@@ -116,10 +116,10 @@ autodoc_exclude_members = [
 ]
 
 [tool.mypy]
-python_version = "3.6"
+python_version = "3.7"
 namespace_packages = true
 check_untyped_defs = true
 warn_unused_ignores = true
 no_implicit_optional = true
-
-[tool.importcheck]
+show_error_codes = true
+exclude = "tests/examplefiles"
