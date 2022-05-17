@@ -20,7 +20,7 @@ highlight
 		* - Docs
 		  - |docs| |docs_check|
 		* - Tests
-		  - |actions_linux| |actions_windows| |actions_macos|
+		  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
 		* - PyPI
 		  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 		* - Activity
@@ -58,8 +58,12 @@ highlight
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| requires-io-shield::
+	.. |requires| image:: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/badge.svg
+		:target: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/
 		:alt: Requirements Status
+
+	.. |coveralls| coveralls-shield::
+		:alt: Coverage
 
 	.. |codefactor| codefactor-shield::
 		:alt: CodeFactor Grade
@@ -100,7 +104,7 @@ highlight
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2021
+	.. |maintained| maintained-shield:: 2022
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::

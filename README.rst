@@ -18,7 +18,7 @@ highlight
 	* - Docs
 	  - |docs| |docs_check|
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos|
+	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -56,9 +56,13 @@ highlight
 	:target: https://github.com/domdfcoding/highlight/actions?query=workflow%3A%22mypy%22
 	:alt: mypy status
 
-.. |requires| image:: https://requires.io/github/domdfcoding/highlight/requirements.svg?branch=master
-	:target: https://requires.io/github/domdfcoding/highlight/requirements/?branch=master
+.. |requires| image:: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/badge.svg
+	:target: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/
 	:alt: Requirements Status
+
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/highlight/master?logo=coveralls
+	:target: https://coveralls.io/github/domdfcoding/highlight?branch=master
+	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/highlight?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/highlight
@@ -95,7 +99,7 @@ highlight
 	:target: https://github.com/domdfcoding/highlight/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2021
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2022
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/highlight

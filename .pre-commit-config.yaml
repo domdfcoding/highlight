@@ -1,7 +1,7 @@
 # This file is managed by 'repo_helper'. Don't edit it directly.
 ---
 
-exclude: ^$
+exclude: ^tests/(examplefiles|test_options_)/.*
 
 repos:
  - repo: https://github.com/repo-helper/pyproject-parser

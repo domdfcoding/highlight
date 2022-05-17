@@ -37,23 +37,22 @@ from cloup.constraints import mutually_exclusive
 from consolekit import click_command, option
 from consolekit.options import flag_option
 
-__all__ = ["main"]
-
+# this package
 from highlight import __version__
 
-_C = TypeVar("_C", bound=click.Command)
+__all__ = ["main"]
 
 
 def option_group(
 		title: str,
-		*options: Callable[[_C], _C],
+		*options: Callable,
 		constraint: Optional[cloup.constraints.Constraint] = None,
-		) -> Callable[[_C], _C]:
-	return cloup.option_group(title, *options, constraint=constraint)  # type: ignore
+		) -> Callable:
+	return cloup.option_group(title, *options, constraint=constraint)
 
 
-@click.version_option(__version__)
-@click_command(cls=cloup.Command)  # type: ignore
+@click.version_option(__version__)  # type: ignore
+@click_command(cls=cloup.Command)
 @option_group(
 		"Filetype Options",
 		option(
@@ -98,10 +97,15 @@ def main(
 	from contextlib import suppress
 
 	# 3rd party
-	import pygments
-	from pygments.lexer import Lexer
-	from pygments.lexers import get_lexer_by_name, get_lexer_for_filename, get_lexer_for_mimetype, guess_lexer
-	from pygments.util import ClassNotFound
+	import pygments  # type: ignore[import]
+	from pygments.lexer import Lexer  # type: ignore[import]
+	from pygments.lexers import (  # type: ignore[import]
+			get_lexer_by_name,
+			get_lexer_for_filename,
+			get_lexer_for_mimetype,
+			guess_lexer
+			)
+	from pygments.util import ClassNotFound  # type: ignore[import]
 
 	# this package
 	from highlight import _TerminalFormatter, joinlines, splitlines
@@ -111,7 +115,7 @@ def main(
 
 	def echo(string, **kwargs):
 		if show_tabs:
-			string = string.replace("\t", "^I")
+			string = string.replace('\t', "^I")
 		return click.echo(f"{string}{end_char}", color=True, **kwargs)
 
 	if file in {None, '-'}:
@@ -119,6 +123,8 @@ def main(
 		text = sys.stdin.read()
 
 	else:
+		assert file is not None
+
 		with suppress(ClassNotFound):
 			# If there's no lexer for the file, just ignore it
 			lexer_cls = get_lexer_for_filename(file, ensurenl=False, tabsize=0)

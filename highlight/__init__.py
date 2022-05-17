@@ -31,7 +31,8 @@ from itertools import chain
 from typing import List, Tuple
 
 # 3rd party
-from pygments.formatters.terminal import TerminalFormatter
+from domdf_python_tools.stringlist import joinlines, splitlines
+from pygments.formatters.terminal import TerminalFormatter  # type: ignore[import]
 
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2021 Dominic Davis-Foster"
@@ -49,41 +50,3 @@ class _TerminalFormatter(TerminalFormatter):
 	def _write_lineno(self, outfile):
 		self._lineno += 1
 		outfile.write(f"{self._lineno != 1 and LF or ''}{self._lineno: >6}\t")
-
-
-def splitlines(string: str) -> List[Tuple[str, str]]:
-	# Translated and adapted from https://github.com/python/cpython/blob/main/Objects/stringlib/split.h
-
-	str_len: int = len(string)
-	i: int = 0
-	j: int = 0
-	eol: int
-	the_list = []
-
-	while i < str_len:
-
-		# Find a line and append it
-		while i < str_len and not string[i] in "\n\r":
-			i += 1
-
-		# Skip the line break reading CRLF as one line break
-		eol = i
-		if i < str_len:
-			if (string[i] == '\r') and (i + 1 < str_len) and (string[i + 1] == '\n'):
-				i += 2
-			else:
-				i += 1
-
-		if j == 0 and eol == str_len and type(string) is str:
-			# No whitespace in string, so just use it as the_list[0]
-			the_list.append(string)
-			break
-
-		the_list.append((string[j:eol], string[eol:i]))
-		j = i
-
-	return the_list
-
-
-def joinlines(lines: List[Tuple[str, str]]) -> str:
-	return ''.join(chain.from_iterable(lines))

@@ -38,6 +38,7 @@ known_third_party = [
     "consolekit",
     "coverage",
     "coverage_pyver_pragma",
+    "domdf_python_tools",
     "importlib_metadata",
     "pygments",
     "pytest",

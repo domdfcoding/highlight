@@ -13,7 +13,6 @@ use_whey: true
 enable_conda: false
 python_deploy_version: 3.7
 #min_coverage: 100
-enable_tests: False
 docs_fail_on_warning: true
 sphinx_html_theme: furo
 mypy_version: "0.910"
@@ -44,3 +43,8 @@ keywords:
 
 console_scripts:
  - highlight=highlight.__main__:main
+
+yapf_exclude:
+ - tests/examplefiles
+
+pre_commit_exclude: "^tests/(examplefiles|test_options_)/.*"
