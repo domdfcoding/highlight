@@ -20,7 +20,7 @@ highlight
 		* - Docs
 		  - |docs| |docs_check|
 		* - Tests
-		  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
+		  - |actions_linux| |actions_macos| |coveralls|
 		* - PyPI
 		  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 		* - Activity
@@ -41,10 +41,6 @@ highlight
 	.. |actions_linux| actions-shield::
 		:workflow: Linux
 		:alt: Linux Test Status
-
-	.. |actions_windows| actions-shield::
-		:workflow: Windows
-		:alt: Windows Test Status
 
 	.. |actions_macos| actions-shield::
 		:workflow: macOS

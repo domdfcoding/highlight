@@ -31,7 +31,7 @@ highlight = "highlight.__main__:main"
 base-classifiers = []
 python-versions = [ "3.6", "3.7", "3.8", "3.9",]
 python-implementations = [ "CPython",]
-platforms = [ "Windows", "macOS", "Linux",]
+platforms = [ "Linux", "macOS",]
 license-key = "MIT"
 
 [tool.sphinx-pyproject]

@@ -51,3 +51,7 @@ intersphinx_mapping:
 
 tox_unmanaged:
   - flake8
+
+platforms:
+  - Linux
+  - macOS
