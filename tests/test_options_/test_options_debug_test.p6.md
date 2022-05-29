@@ -1,0 +1,253 @@
+Using lexer <pygments.lexers.Perl6Lexer with {'ensurenl': False, 'tabsize': 0}>
+[37m#!/usr/bin/env perl6[39;49;00m
+
+[34muse[39;49;00m v6;
+
+[34mmy[39;49;00m [31m$string[39;49;00m = [33m'I look like a # comment!'[39;49;00m;
+
+[34mif[39;49;00m [31m$string[39;49;00m eq [33m'foo'[39;49;00m {
+    [36msay[39;49;00m [33m'hello'[39;49;00m;
+}
+
+[34mregex[39;49;00m http-verb {[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m'GET'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'POST'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'PUT'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'DELETE'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'TRACE'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'OPTIONS'[39;49;00m[33m[39;49;00m
+[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m [39;49;00m[33m|[39;49;00m[33m [39;49;00m[33m'HEAD'[39;49;00m[33m[39;49;00m
+}
+
+[37m# a sample comment[39;49;00m
+
+[36msay[39;49;00m [33m'Hello from Perl 6!'[39;49;00m
+
+
+[37m#`{[39;49;00m
+[37mmulti-line comment![39;49;00m
+[37m}[39;49;00m
+
+[36msay[39;49;00m [33m'here'[39;49;00m;
+
+[37m#`([39;49;00m
+[37mmulti-line comment![39;49;00m
+[37m)[39;49;00m
+
+[36msay[39;49;00m [33m'here'[39;49;00m;
+
+[37m#`{{{[39;49;00m
+[37mI'm a special comment![39;49;00m
+[37m}}}[39;49;00m
+
+[36msay[39;49;00m [33m'there'[39;49;00m;
+
+[37m#`{{[39;49;00m
+[37mI'm { even } specialer![39;49;00m
+[37m}}[39;49;00m
+
+[36msay[39;49;00m [33m'there'[39;49;00m;
+
+[37m#`{{[39;49;00m
+[37mdoes {{nesting}} work?[39;49;00m
+[37m}}[39;49;00m
+
+[37m#`«<[39;49;00m
+[37mtrying mixed delimiters[39;49;00m
+[37m»[39;49;00m
+
+[34mmy[39;49;00m [31m$string[39;49;00m = [33mqq<Hooray, arbitrary delimiter!>[39;49;00m;
+[34mmy[39;49;00m [31m$string[39;49;00m = [33mqq«Hooray, arbitrary delimiter!»[39;49;00m;
+[34mmy[39;49;00m [31m$string[39;49;00m = [33mq <now with whitespace!>[39;49;00m;
+[34mmy[39;49;00m [31m$string[39;49;00m = [33mqq<<more strings>>[39;49;00m;
+
+[34mmy[39;49;00m [31m%hash[39;49;00m := [36mHash[39;49;00m.[36mnew[39;49;00m;
+[37m[39;49;00m
+[37m=begin pod[39;49;00m
+[37m[39;49;00m
+[37mHere's some POD!  Wooo[39;49;00m
+[37m[39;49;00m
+[37m=end pod[39;49;00m
+[37m[39;49;00m
+[37m=for Testing[39;49;00m
+[37m    This is POD (see? role isn't highlighted)[39;49;00m
+[37m[39;49;00m
+[36msay[39;49;00m([33m'this is not!'[39;49;00m);
+
+[37m=table[39;49;00m
+[37m    Of role things[39;49;00m
+[37m[39;49;00m
+[36msay[39;49;00m([33m'not in your table'[39;49;00m);
+[37m#= A single line declarator "block" (with a keyword like role)[39;49;00m
+[37m#| Another single line declarator "block" (with a keyword like role)[39;49;00m
+[37m#={[39;49;00m
+[37m    A declarator block (with a keyword like role)[39;49;00m
+[37m  }[39;49;00m
+[37m#|{[39;49;00m
+[37m    Another declarator block (with a keyword like role)[39;49;00m
+[37m  }[39;49;00m
+[37m#= { A single line declarator "block" with a brace (with a keyword like role)[39;49;00m
+[37m#=«[39;49;00m
+[37m    More declarator blocks! (with a keyword like role)[39;49;00m
+[37m  »[39;49;00m
+[37m#|«[39;49;00m
+[37m    More declarator blocks! (with a keyword like role)[39;49;00m
+[37m  »[39;49;00m
+
+[36msay[39;49;00m [33m'Moar code!'[39;49;00m;
+
+[34mmy[39;49;00m [31m$don't[39;49;00m = [34m16[39;49;00m;
+
+[34msub[39;49;00m don't([31m$x[39;49;00m) {
+    ![31m$x[39;49;00m
+}
+
+[36msay[39;49;00m don't [33m'foo'[39;49;00m;
+
+[34mmy[39;49;00m [31m%hash[39;49;00m = (
+    :foo([34m1[39;49;00m),
+);
+
+[36msay[39;49;00m [31m%hash<foo>[39;49;00m;
+[36msay[39;49;00m [31m%hash<<foo>>[39;49;00m;
+[36msay[39;49;00m [31m%hash«foo»[39;49;00m;
+
+[36msay[39;49;00m [31m%*hash<foo>[39;49;00m;
+[36msay[39;49;00m [31m%*hash<<foo>>[39;49;00m;
+[36msay[39;49;00m [31m%*hash«foo»[39;49;00m;
+
+[36msay[39;49;00m [31m$<todo>[39;49;00m;
+[36msay[39;49;00m [31m$<todo>[39;49;00m;
+
+[34mfor[39;49;00m ([31m@A[39;49;00m Z [31m@B[39;49;00m) -> [31m$a[39;49;00m, [31m$b[39;49;00m {
+    [36msay[39;49;00m [31m$a[39;49;00m + [31m$b[39;49;00m;
+}
+
+[33mQ:PIR {[39;49;00m
+[33m    .loadlib "somelib"[39;49;00m
+[33m}[39;49;00m
+
+[34mmy[39;49;00m [31m$longstring[39;49;00m = [33mq/[39;49;00m
+[33m    lots[39;49;00m
+[33m    of[39;49;00m
+[33m    text[39;49;00m
+[33m/[39;49;00m;
+
+[34mmy[39;49;00m [31m$heredoc[39;49;00m = [33mq:to/END_SQL/;[39;49;00m
+[33mSELECT * FROM Users[39;49;00m
+[33mWHERE first_name = 'Rob'[39;49;00m
+[33mEND_SQL[39;49;00m
+[34mmy[39;49;00m [31m$hello[39;49;00m;
+
+[37m# Fun with regexen[39;49;00m
+
+[34mif[39;49;00m [33m'food'[39;49;00m ~~[33m /foo/[39;49;00m {
+    [36msay[39;49;00m [33m'match!'[39;49;00m
+}
+
+[34mmy[39;49;00m [31m$re[39;49;00m  =[33m /foo/[39;49;00m;
+[34mmy[39;49;00m [31m$re2[39;49;00m = [33mm/ foo /[39;49;00m;
+[34mmy[39;49;00m [31m$re3[39;49;00m = [33mm:i/ FOO /[39;49;00m;
+
+call-a-sub([33m/ foo /[39;49;00m);
+call-a-sub([33m/ foo \/ bar /[39;49;00m);
+
+[34mmy[39;49;00m [31m$re4[39;49;00m    = [33mrx/something | something-else/[39;49;00m;
+[34mmy[39;49;00m [31m$result[39;49;00m = [33mms/regexy stuff/[39;49;00m;
+[34mmy[39;49;00m [31m$sub0[39;49;00m   = [36ms[39;49;00m/regexy stuff/more stuff/;
+[34mmy[39;49;00m [31m$sub[39;49;00m    = [33mss/regexy stuff/more stuff/[39;49;00m;
+[34mmy[39;49;00m [31m$trans[39;49;00m  = [33mtr/regexy stuff/more stuff/[39;49;00m;
+
+[34mmy[39;49;00m [31m@values[39;49;00m = [33m<a b c d>[39;49;00m;
+call-sub([33m<a b c d>[39;49;00m);
+call-sub [33m<a b c d>[39;49;00m;
+
+[34mmy[39;49;00m [31m$result[39;49;00m = [31m$a[39;49;00m < [31m$b[39;49;00m;
+
+[34mfor[39;49;00m [33m<a b c d>[39;49;00m -> [31m$letter[39;49;00m {
+    [36msay[39;49;00m [31m$letter[39;49;00m;
+}
+
+[34msub[39;49;00m test-sub {
+    [36msay[39;49;00m [31m@_[39;49;00m;
+    [36msay[39;49;00m [31m$![39;49;00m;
+    [36msay[39;49;00m [31m$/[39;49;00m;
+    [36msay[39;49;00m [31m$0[39;49;00m;
+    [36msay[39;49;00m [31m$1[39;49;00m;
+    [36msay[39;49;00m [31m@*ARGS[39;49;00m;
+    [36msay[39;49;00m [31m$*ARGFILES[39;49;00m;
+    [36msay[39;49;00m [31m&?BLOCK[39;49;00m;
+    [36msay[39;49;00m [31m::?CLASS[39;49;00m;
+    [36msay[39;49;00m [31m$?CLASS[39;49;00m;
+    [36msay[39;49;00m [31m@=COMMENT[39;49;00m;
+    [36msay[39;49;00m [31m%?CONFIG[39;49;00m;
+    [36msay[39;49;00m [31m$*CWD[39;49;00m;
+    [36msay[39;49;00m [31m$=data[39;49;00m;
+    [36msay[39;49;00m [31m%?DEEPMAGIC[39;49;00m;
+    [36msay[39;49;00m [31m$?DISTRO[39;49;00m;
+    [36msay[39;49;00m [31m$*DISTRO[39;49;00m;
+    [36msay[39;49;00m [31m$*EGID[39;49;00m;
+    [36msay[39;49;00m [31m%*ENV[39;49;00m;
+    [36msay[39;49;00m [31m$*ERR[39;49;00m;
+    [36msay[39;49;00m [31m$*EUID[39;49;00m;
+    [36msay[39;49;00m [31m$*EXECUTABLE_NAME[39;49;00m;
+    [36msay[39;49;00m [31m$?FILE[39;49;00m;
+    [36msay[39;49;00m [31m$?GRAMMAR[39;49;00m;
+    [36msay[39;49;00m [31m$*GID[39;49;00m;
+    [36msay[39;49;00m [31m$*IN[39;49;00m;
+    [36msay[39;49;00m [31m@*INC[39;49;00m;
+    [36msay[39;49;00m [31m%?LANG[39;49;00m;
+    [36msay[39;49;00m [31m$*LANG[39;49;00m;
+    [36msay[39;49;00m [31m$?LINE[39;49;00m;
+    [36msay[39;49;00m [31m%*META-ARGS[39;49;00m;
+    [36msay[39;49;00m [31m$?MODULE[39;49;00m;
+    [36msay[39;49;00m [31m%*OPTS[39;49;00m;
+    [36msay[39;49;00m [31m%*OPT[39;49;00m;
+    [36msay[39;49;00m [31m$?KERNEL[39;49;00m;
+    [36msay[39;49;00m [31m$*KERNEL[39;49;00m;
+    [36msay[39;49;00m [31m$*OUT[39;49;00m;
+    [36msay[39;49;00m [31m$?PACKAGE[39;49;00m;
+    [36msay[39;49;00m [31m$?PERL[39;49;00m;
+    [36msay[39;49;00m [31m$*PERL[39;49;00m;
+    [36msay[39;49;00m [31m$*PID[39;49;00m;
+    [36msay[39;49;00m [31m%=pod[39;49;00m;
+    [36msay[39;49;00m [31m$*PROGRAM_NAME[39;49;00m;
+    [36msay[39;49;00m [31m%*PROTOCOLS[39;49;00m;
+    [36msay[39;49;00m [31m::?ROLE[39;49;00m;
+    [36msay[39;49;00m [31m$?ROLE[39;49;00m;
+    [36msay[39;49;00m [31m&?ROUTINE[39;49;00m;
+    [36msay[39;49;00m [31m$?SCOPE[39;49;00m;
+    [36msay[39;49;00m [31m$*TZ[39;49;00m;
+    [36msay[39;49;00m [31m$*UID[39;49;00m;
+    [36msay[39;49;00m [31m$?USAGE[39;49;00m;
+    [36msay[39;49;00m [31m$?VM[39;49;00m;
+    [36msay[39;49;00m [31m$?XVM[39;49;00m;
+}
+
+[36msay[39;49;00m [33m<a b c>[39;49;00m;
+
+[34mmy[39;49;00m [31m$perl5_re[39;49;00m = [33mm:P5/ fo{2} /[39;49;00m;
+[34mmy[39;49;00m [31m$re5[39;49;00m      = [33mrx«something | something-else»[39;49;00m;
+
+[34mmy[39;49;00m [31m$M[39;49;00m := [31m%*COMPILING<%?OPTIONS><M>[39;49;00m;
+
+[36msay[39;49;00m [31m$M[39;49;00m;
+
+[34msub[39;49;00m regex-name { ... }
+[34mmy[39;49;00m [31m$pair[39;49;00m = role-name => [33m'foo'[39;49;00m;
+[31m$pair[39;49;00m = rolesque => [33m'foo'[39;49;00m;
+
+[34mmy[39;49;00m [34msub[39;49;00m something([36mStr:D[39;49;00m [31m$value[39;49;00m) { ... }
+
+[34mmy[39;49;00m [31m$s[39;49;00m = [33mq«<[39;49;00m
+[33msome[39;49;00m
+[33mstring[39;49;00m
+[33mstuff[39;49;00m
+[33m»[39;49;00m;
+
+[34mmy[39;49;00m [31m$regex[39;49;00m = [33mm«< some chars »[39;49;00m;
+[37m# after[39;49;00m
+
+[36msay[39;49;00m [31m$/<foo><bar>[39;49;00m;
+
+roleq;

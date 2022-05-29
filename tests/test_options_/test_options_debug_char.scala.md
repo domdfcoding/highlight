@@ -1,0 +1,5 @@
+Using lexer <pygments.lexers.ScalaLexer with {'ensurenl': False, 'tabsize': 0}>
+[33m'symbol[39;49;00m[37m[39;49;00m
+[33m'a'[39;49;00m[37m[39;49;00m
+[33m'\u1234'[39;49;00m[37m[39;49;00m
+[33m'[39;49;00m[33m\n[39;49;00m[33m'[39;49;00m

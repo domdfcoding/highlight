@@ -28,7 +28,7 @@ Command-line entry point.
 
 # stdlib
 import sys
-from typing import Callable, Optional, TypeVar
+from typing import Callable, Optional
 
 # 3rd party
 import click
@@ -36,6 +36,7 @@ import cloup
 from cloup.constraints import mutually_exclusive
 from consolekit import click_command, option
 from consolekit.options import flag_option
+from domdf_python_tools.utils import stderr_writer
 
 # this package
 from highlight import __version__
@@ -74,6 +75,7 @@ def option_group(
 @flag_option("-T", "--show-tabs", help="Display TAB characters as ^I.")
 @flag_option("-E", "--show-ends", help="Display $ at the end of each line.")
 @flag_option("-n", "--number", help="Number all output lines.")
+@flag_option("-D", "--debug", help="Print the lexer name to stderr.")
 @click.argument(
 		"file",
 		type=click.STRING,
@@ -86,6 +88,7 @@ def main(
 		number: bool = False,
 		show_ends: bool = False,
 		show_tabs: bool = False,
+		debug: bool = False,
 		):
 	"""
 	Print the content of FILE with syntax highlighting.
@@ -140,9 +143,11 @@ def main(
 			raise click.BadOptionUsage("--lexer", str(e))
 
 	elif mime is not None:
-		with suppress(ClassNotFound):
-			# If there's no lexer for the MIME type, just ignore it
+		try:
+			# If there's no lexer for the MIME type, warn and ignore it
 			lexer_cls = get_lexer_for_mimetype(mime, ensurenl=False, tabsize=0)
+		except ClassNotFound as e:
+			stderr_writer(f"WARNING: {e}")
 
 	if lexer_cls is None:
 		# Last ditch effort
@@ -155,7 +160,13 @@ def main(
 	else:
 		lastline_empty = False
 
-	if lexer_cls is not None:
+	if lexer_cls is None:
+		if debug:
+			stderr_writer("Unable to determine lexer")
+	else:
+		if debug:
+			stderr_writer(f"Using lexer {lexer_cls!r}")
+
 		tokens = lexer_cls.get_tokens(joinlines(lines))
 		lines = splitlines(pygments.format(
 				tokens,

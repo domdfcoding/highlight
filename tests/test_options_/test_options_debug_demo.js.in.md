@@ -1,0 +1,7 @@
+Using lexer <pygments.lexers.MozPreprocJavascriptLexer with {'ensurenl': False, 'tabsize': 0}>
+[36mwindow[39;49;00m.foo[37m [39;49;00m=[37m [39;49;00m{
+[36m#[39;49;00m[36mif[39;49;00m [34mdefined[39;49;00m([31m__foo__[39;49;00m)
+[37m  [39;49;00m[33m'key'[39;49;00m:[37m [39;49;00m[33m'value'[39;49;00m
+[36m#[39;49;00m[36mendif[39;49;00m
+}
+[36m#[39;49;00m[36mliteral[39;49;00m #foo

@@ -26,6 +26,7 @@ examplefiles_dir = PathPlus(__file__).parent / "examplefiles"
 				pytest.param(["-T", "--show-ends"], id="tabs_and_ends"),
 				pytest.param(["--number", "-E"], id="number_and_ends"),
 				pytest.param(["-n", "-E", "--show-tabs"], id="all"),
+				pytest.param(["-D"], id="debug"),
 				]
 		)
 def test_options(

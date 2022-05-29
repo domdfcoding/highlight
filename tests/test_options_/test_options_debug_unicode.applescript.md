@@ -1,0 +1,6 @@
+Using lexer <pygments.lexers.AppleScriptLexer with {'ensurenl': False, 'tabsize': 0}>
+[34mset[39;49;00m [31mjp[39;49;00m [34mto[39;49;00m [33m"日本語"[39;49;00m
+
+[34mset[39;49;00m [31mru[39;49;00m [34mto[39;49;00m [33m"Русский"[39;49;00m
+
+[31mjp[39;49;00m & [33m" and "[39;49;00m & [31mru[39;49;00m [37m-- returns "日本語 and Русский"[39;49;00m
