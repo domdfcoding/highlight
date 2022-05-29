@@ -21,10 +21,8 @@ highlight
 		  - |docs| |docs_check|
 		* - Tests
 		  - |actions_linux| |actions_macos| |coveralls|
-		* - PyPI
-		  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 		* - Activity
-		  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
+		  - |commits-latest| |commits-since| |maintained|
 		* - QA
 		  - |codefactor| |actions_flake8| |actions_mypy|
 		* - Other
@@ -64,26 +62,6 @@ highlight
 	.. |codefactor| codefactor-shield::
 		:alt: CodeFactor Grade
 
-	.. |pypi-version| pypi-shield::
-		:project: highlight
-		:version:
-		:alt: PyPI - Package Version
-
-	.. |supported-versions| pypi-shield::
-		:project: highlight
-		:py-versions:
-		:alt: PyPI - Supported Python Versions
-
-	.. |supported-implementations| pypi-shield::
-		:project: highlight
-		:implementations:
-		:alt: PyPI - Supported Implementations
-
-	.. |wheel| pypi-shield::
-		:project: highlight
-		:wheel:
-		:alt: PyPI - Wheel
-
 	.. |license| github-shield::
 		:license:
 		:alt: License
@@ -103,11 +81,6 @@ highlight
 	.. |maintained| maintained-shield:: 2022
 		:alt: Maintenance
 
-	.. |pypi-downloads| pypi-shield::
-		:project: highlight
-		:downloads: month
-		:alt: PyPI - Downloads
-
 .. end shields
 
 Installation
@@ -116,7 +89,6 @@ Installation
 .. start installation
 
 .. installation:: highlight
-	:pypi:
 	:github:
 
 .. end installation
