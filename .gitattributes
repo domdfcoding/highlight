@@ -1,0 +1,2 @@
+tests/examplefiles/** linguist-detectable=false
+tests/test_options_/** linguist-detectable=false
