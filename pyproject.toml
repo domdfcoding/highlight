@@ -4,7 +4,7 @@ build-backend = "whey"
 
 [project]
 name = "highlight"
-version = "0.1.0"
+version = "0.2.0"
 description = "Highlight text on the command line."
 readme = "README.rst"
 keywords = [ "cat", "console", "highlight",]

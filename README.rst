@@ -87,7 +87,7 @@ highlight
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/highlight
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/highlight/v0.1.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/highlight/v0.2.0
 	:target: https://github.com/domdfcoding/highlight/pulse
 	:alt: GitHub commits since tagged version
 
