@@ -52,8 +52,8 @@ highlight
 		:workflow: mypy
 		:alt: mypy status
 
-	.. |requires| image:: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/badge.svg
-		:target: https://dependency-dash.herokuapp.com/github/domdfcoding/highlight/
+	.. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/highlight/badge.svg
+		:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/highlight/
 		:alt: Requirements Status
 
 	.. |coveralls| coveralls-shield::
@@ -78,7 +78,7 @@ highlight
 		:last-commit:
 		:alt: GitHub last commit
 
-	.. |maintained| maintained-shield:: 2022
+	.. |maintained| maintained-shield:: 2023
 		:alt: Maintenance
 
 .. end shields

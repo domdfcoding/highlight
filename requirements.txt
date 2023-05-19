@@ -2,4 +2,4 @@ click>=8.0.1
 cloup>=0.10.0
 consolekit>=1.2.3
 domdf-python-tools>=3.3.0
-pygments>=2.9.0,<2.13.0
+pygments<2.13.0,>=2.9.0
