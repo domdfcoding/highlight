@@ -29,7 +29,7 @@ highlight = "highlight.__main__:main"
 
 [tool.whey]
 base-classifiers = []
-python-versions = [ "3.6", "3.7", "3.8", "3.9", "3.10", "3.11",]
+python-versions = [ "3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
 platforms = [ "Linux", "macOS",]
 license-key = "MIT"
