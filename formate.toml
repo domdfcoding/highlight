@@ -46,4 +46,4 @@ known_third_party = [
     "pytest_randomly",
     "pytest_timeout",
 ]
-known_first_party = "highlight"
+known_first_party = [ "highlight",]
