@@ -100,15 +100,15 @@ def main(
 	from contextlib import suppress
 
 	# 3rd party
-	import pygments  # type: ignore[import]
-	from pygments.lexer import Lexer  # type: ignore[import]
-	from pygments.lexers import (  # type: ignore[import]
+	import pygments  # type: ignore[import-untyped]
+	from pygments.lexer import Lexer  # type: ignore[import-untyped]
+	from pygments.lexers import (  # type: ignore[import-untyped]
 			get_lexer_by_name,
 			get_lexer_for_filename,
 			get_lexer_for_mimetype,
 			guess_lexer
 			)
-	from pygments.util import ClassNotFound  # type: ignore[import]
+	from pygments.util import ClassNotFound  # type: ignore[import-untyped]
 
 	# this package
 	from highlight import _TerminalFormatter, joinlines, splitlines

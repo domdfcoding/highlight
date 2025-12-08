@@ -32,7 +32,7 @@ from typing import List, Tuple
 
 # 3rd party
 from domdf_python_tools.stringlist import joinlines, splitlines
-from pygments.formatters.terminal import TerminalFormatter  # type: ignore[import]
+from pygments.formatters.terminal import TerminalFormatter  # type: ignore[import-untyped]
 
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2021 Dominic Davis-Foster"
