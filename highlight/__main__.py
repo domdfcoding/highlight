@@ -70,7 +70,7 @@ def option_group(
 				type=click.STRING,
 				default=None,
 				),
-		constraint=mutually_exclusive
+		constraint=mutually_exclusive,
 		)
 @flag_option("-T", "--show-tabs", help="Display TAB characters as ^I.")
 @flag_option("-E", "--show-ends", help="Display $ at the end of each line.")
@@ -171,7 +171,7 @@ def main(
 		lines = splitlines(pygments.format(
 				tokens,
 				formatter=_TerminalFormatter(linenos=number),
-				))
+				), )
 
 	for line in lines[:-1]:
 		echo(line[0])
