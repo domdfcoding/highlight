@@ -171,7 +171,7 @@ def main(
 		lines = splitlines(pygments.format(
 				tokens,
 				formatter=_TerminalFormatter(linenos=number),
-				), )
+				))
 
 	for line in lines[:-1]:
 		echo(line[0])
